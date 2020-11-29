@@ -1,17 +1,22 @@
 # Validate GTF
-# Matricola : 844659
-# Nome : Simone
-# Cognome : Mallei
+# Student Code Number : 844659
+# Name : Simone
+# Surname : Mallei
 
 import re
 from datetime import datetime
 
+# Given a string containing the ninth field of a gtf record, it returns
+# the transcript_id and the gene_id
 def get_transcript_and_gene(attrs):
     transcript_id = re.findall('transcript_id\s+"([^"]*)";', attrs)[0]
     gene_id = re.findall('gene_id\s+"([^"]*)";', attrs)[0]
     return (transcript_id, gene_id)
 
-# Verifies intra-row constraints
+# Given a string containing a gtf record, its index in the file and
+# the dictionary containing all the errors that has been found, it verifies 
+# intra-row constraints and modify the dictionary depending on the 
+# violations of gtf_row
 def validate_row(gtf_row, index_row, errors):
     num_fields = 9
         
@@ -104,6 +109,8 @@ def validate_row(gtf_row, index_row, errors):
     except:
         errors['attributes'].append(index_row)
 
+# Given an errors' dictionary and the name of the file that should have
+# these errors, reports in a file which violations occurred in the file.
 def write_report(errors, file_name):
     error_string = {
         'num_fields': 'FieldsError: Wrong number of fields in row: ',
@@ -138,8 +145,8 @@ def write_report(errors, file_name):
             output_file.write(error_string[error_type]+str(element)+'\n')
     output_file.close()
 
-# Verifies constraints in the entire .gtf file (intra-row and inter-row
-# constraints)
+# Given a path of the directory containing the file to validate and the file's name
+# it verifies constraints in the entire .gtf file (intra-row and inter-row constraints)
 def validate_file(gtf_dir, gtf_file_name):
     
     with open(gtf_dir+gtf_file_name, 'r') as gtf_input_file:
