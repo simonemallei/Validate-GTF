@@ -1,0 +1,4 @@
+REPORT OF FILE: example002.gtf
+Time of report: 2020-11-29 20:36:31.862865
+
+EndError: End value is less than 1 in row: 2

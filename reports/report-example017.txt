@@ -1,0 +1,5 @@
+REPORT OF FILE: example017.gtf
+Time of report: 2020-11-29 20:36:32.682858
+
+CDSStopCodonError: stop_codon is not after CDS in: ('001', '001.2')
+CDSStopCodonError: stop_codon is not after CDS in: ('001', '001.1')

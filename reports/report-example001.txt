@@ -1,0 +1,4 @@
+REPORT OF FILE: example001.gtf
+Time of report: 2020-11-29 20:36:31.827925
+
+StartError: Start value is less than 1 in row: 2

@@ -1,0 +1,5 @@
+REPORT OF FILE: example005.gtf
+Time of report: 2020-11-29 20:36:31.981619
+
+StopCodonError: Wrong length of stop codon in row: 5
+StopCodonError: Missing stop_codon feature in: ('001', '001.1')

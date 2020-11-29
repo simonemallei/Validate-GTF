@@ -1,0 +1,6 @@
+REPORT OF FILE: example014.gtf
+Time of report: 2020-11-29 20:36:32.474669
+
+StartCodonError: start_codon intervals set wrong in: ('001', '001.3')
+StartCodonError: start_codon intervals set wrong in: ('001', '001.2')
+StartCodonError: start_codon intervals set wrong in: ('001', '001.1')

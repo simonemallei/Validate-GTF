@@ -1,0 +1,4 @@
+REPORT OF FILE: example003.gtf
+Time of report: 2020-11-29 20:36:31.897487
+
+StartEndError: Start value greater than end value in row: 2

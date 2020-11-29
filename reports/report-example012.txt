@@ -1,0 +1,4 @@
+REPORT OF FILE: example012.gtf
+Time of report: 2020-11-29 20:36:32.384720
+
+StrandError: Both strands used in: 001
